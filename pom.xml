@@ -63,6 +63,10 @@
 			<version>1.16.4</version>
 		</dependency>
   </dependencies>
+  <properties>
+		<project.build.sourceEncoding>GBK</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>GBK</project.reporting.outputEncoding>
+	</properties>
   <distributionManagement>
         <repository>
             <id>releases</id>
