@@ -60,13 +60,17 @@
   	<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.16.4</version>
+			<version>1.18.2</version>
 		</dependency>
   </dependencies>
   <properties>
-		<project.build.sourceEncoding>GBK</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>GBK</project.reporting.outputEncoding>
-	</properties>
+		<!-- project.build.sourceEncoding>GBK</project.build.sourceEncoding -->
+		<!-- project.reporting.outputEncoding>GBK</project.reporting.outputEncoding -->
+		<maven.compiler.encoding>GBK</maven.compiler.encoding>
+    <project.build.sourceEncoding>GBK</project.build.sourceEncoding>
+
+</properties>
+
   <distributionManagement>
         <repository>
             <id>releases</id>
@@ -77,4 +81,27 @@
             <url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
+    <build>
+    <plugins>
+    <!-- <plugin>
+    	<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-javadoc-plugin</artifactId>
+		<version>2.9.1</version>
+		<configuration>
+        <reportOutputDirectory>../javadocs</reportOutputDirectory>
+        <destDir>easy-delivery</destDir>
+    </configuration>
+	</plugin>
+	<plugin>
+        <groupId>org.codehaus.mojo</groupId>        
+        <artifactId>findbugs-maven-plugin</artifactId>        
+        <version>3.0.1</version>
+        <configuration>        
+           <findbugsXmlOutput>true</findbugsXmlOutput>        
+           <findbugsXmlWithMessages>true</findbugsXmlWithMessages>        
+           <xmlOutput>true</xmlOutput>        
+        </configuration>        
+       </plugin> -->
+	</plugins>
+	</build>
 </project>

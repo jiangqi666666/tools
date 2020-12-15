@@ -1,14 +1,14 @@
-package com.jiangqi.gof23.abstractFactory;
+package com.jiangqi.gof23.simplefactory;
 
 /**
- * 产品统一接口
+ * 测试接口
  * @author jiangqi
  *
  */
 public interface ITest {
 	
 	/**
-	 * 产品测试方法
+	 * 测试方法
 	 */
 	public void doSomeThing();
 }

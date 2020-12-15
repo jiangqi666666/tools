@@ -1,4 +1,4 @@
-package com.jiangqi.gof23.abstractFactory;
+package com.jiangqi.gof23.abstractfactory;
 
 /**
  * 统一工厂接口

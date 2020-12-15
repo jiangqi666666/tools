@@ -1,4 +1,4 @@
-package com.jiangqi.gof23.simpleFactory;
+package com.jiangqi.gof23.simplefactory;
 
 /**
  * ¼òµ¥¹¤³§

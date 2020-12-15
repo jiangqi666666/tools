@@ -1,4 +1,4 @@
-package com.jiangqi.tools.propertyManager;
+package com.jiangqi.tools.propertymanager;
 
 public class Test {
 

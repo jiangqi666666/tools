@@ -1,4 +1,4 @@
-package com.jiangqi.gof23.abstractFactory;
+package com.jiangqi.gof23.abstractfactory;
 
 /**
  * 虚拟工厂类
@@ -6,6 +6,13 @@ package com.jiangqi.gof23.abstractFactory;
  *
  */
 public   class  AbstractFactory {
+	
+	/**
+	 * 
+	 */
+	private AbstractFactory() {
+		throw new IllegalStateException("Utility class");
+	}
 	
 	/**
 	 * 获得具体One工厂

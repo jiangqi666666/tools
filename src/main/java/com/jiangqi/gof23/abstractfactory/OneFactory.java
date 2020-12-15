@@ -1,4 +1,4 @@
-package com.jiangqi.gof23.abstractFactory;
+package com.jiangqi.gof23.abstractfactory;
 
 /**
  * 具体One工厂
@@ -10,7 +10,7 @@ public class OneFactory implements IFcatory {
 
 	@Override
 	public ITest getTest(int i) {
-		// TODO Auto-generated method stub
+		
 		switch(i){
 		case 0:
 			return new OneTest();
