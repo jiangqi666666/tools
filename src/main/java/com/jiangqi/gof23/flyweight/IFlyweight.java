@@ -10,5 +10,5 @@ public interface IFlyweight {
 	/**
 	 * ¾ßÌå²Ù×÷
 	 */
-	public void Operation();
+	public void operation();
 }

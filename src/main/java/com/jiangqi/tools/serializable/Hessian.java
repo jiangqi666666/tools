@@ -12,6 +12,8 @@ import com.caucho.hessian.io.HessianOutput;
  *
  */
 public class Hessian {
+	
+	private Hessian() {}
 
 	/**
 	 * �Ѷ������л�Ϊ�ֽ�
@@ -33,7 +35,7 @@ public class Hessian {
 	 * @return
 	 * @throws IOException
 	 */
-	public static Object getSerializable(byte[] obj) throws IOException, ClassNotFoundException{
+	public static Object getSerializable(byte[] obj) throws IOException{
 		ByteArrayInputStream os=new ByteArrayInputStream(obj);
 		HessianInput in = new HessianInput(os);
 		return in.readObject();

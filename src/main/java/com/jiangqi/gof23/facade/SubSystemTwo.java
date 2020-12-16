@@ -10,14 +10,14 @@ public class SubSystemTwo {
 	/**
 	 * 子系统方法MethodOne
 	 */
-	public void MethodOne(){
+	public void methodOne(){
 		System.out.println("子系统2的方法1");
 	}
 	
 	/**
 	 * 子系统方法MethodTwo
 	 */
-	public void MethodTwo(){
+	public void methodTwo(){
 		System.out.println("子系统2的方法2");
 	}
 }

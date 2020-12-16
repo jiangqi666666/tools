@@ -7,15 +7,15 @@ package com.jiangqi.gof23.templatemethod;
  */
 public abstract class AbstractClass {
 
-	public abstract void PrimitiveOperation1();
-	public abstract void PrimitiveOperation2();
+	public abstract void primitiveOperation1();
+	public abstract void primitiveOperation2();
 	
 	/**
 	 * 模板方法
 	 */
-	public void TemplateMethod(){
-		PrimitiveOperation1();
-		PrimitiveOperation2();
+	public void templateMethod(){
+		primitiveOperation1();
+		primitiveOperation2();
 		System.out.println("统一方法");
 	}
 }

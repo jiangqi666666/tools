@@ -7,7 +7,7 @@ package com.jiangqi.gof23.facade;
  */
 public class SubSystemOne {
 
-	public void MethodOne(){
+	public void methodOne(){
 		System.out.println("子系统1的方法1");
 	}
 }

@@ -35,7 +35,6 @@ public class Main {
 	 * 重新调用Execute方法一条条执行这些命令，从而恢复系统在崩溃前所做的数据快更新。
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 				
 		//创建命令信息
 		CommandInfo info=new CommandInfo();
@@ -44,7 +43,7 @@ public class Main {
 		info.setPar2("par2");
 		
 		//创建命令对象，并设置它的接收者
-		ConcreteCommand<CommandInfo> c=new ConcreteCommand<CommandInfo>(info);
+		ConcreteCommand<CommandInfo> c=new ConcreteCommand<>(info);
 		//创建接收站
 		c.addReceiver(new Receiver2());
 		c.addReceiver(new Receiver1());

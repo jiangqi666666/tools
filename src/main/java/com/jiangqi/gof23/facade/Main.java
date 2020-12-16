@@ -13,10 +13,10 @@ public class Main {
 	 * 4、只暴露遗留系统中一部分内容给新系统而不用全部暴露
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		Facade test=new Facade();
-		test.MethodA();
-		test.MethodB();
+		test.methodA();
+		test.methodB();
 	}
 
 }

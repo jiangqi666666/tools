@@ -12,6 +12,8 @@ import java.io.ObjectOutputStream;
  *
  */
 public class JavaIn {
+	
+	private JavaIn() {}
 
 	/**
 	 * 把对象序列化为字节

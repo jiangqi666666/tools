@@ -14,22 +14,24 @@ public class Main {
 	 * 2、通过预定义的状态策略，通过事件方式自动变更状态
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		StateMachine c=new StateMachine();
 		Context context=new Context();
+		
+		String tmp="-------------";
 	
 		c.changeState(context,"start");
-		System.out.println("-------------");
+		System.out.println(tmp);
 		
 		c.changeState(context,"a1");
-		System.out.println("-------------");
+		System.out.println(tmp);
 		
 		c.changeState(context,"b1");
 		
-		System.out.println("-------------");
+		System.out.println(tmp);
 		c.changeState(context,"a2");
 		
-		System.out.println("-------------");
+		System.out.println(tmp);
 		
 		c.changeState(context,"start");
 		c.changeState(context,"a1");

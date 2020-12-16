@@ -9,12 +9,12 @@ import java.util.ArrayList;
  */
 public class ConcreteAggregate<T> implements Aggregate<T> {
 
-	private ArrayList<T> items=new ArrayList<T>();
+	private ArrayList<T> items=new ArrayList<>();
 
 	@Override
 	public Iterator<T> createIterator() {
-		// TODO Auto-generated method stub
-		return new ConcreteIterator<T>(this) ;
+
+		return new ConcreteIterator<>(this) ;
 	}
 
 	@Override

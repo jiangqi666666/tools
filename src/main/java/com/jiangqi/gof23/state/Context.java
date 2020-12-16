@@ -20,9 +20,9 @@ public class Context {
 	private State state;
 	
 	@Getter
-	private final Map<String,State> strategy=new HashMap<String,State>();
+	private final Map<String,State> strategy=new HashMap<>();
 	
-	private final String key="%d.%s";
+	private static final String KEY="%d.%s";
 	
 	public Context(){
 		init();
@@ -37,15 +37,15 @@ public class Context {
 		this.state=(tmp[0]);
 		
 		//从起始状态通过start事件触发，变化到ConcreteStateA状态
-		this.strategy.put(String.format(key,tmp[0].getState(), "start"),tmp[1]);
+		this.strategy.put(String.format(KEY,tmp[0].getState(), "start"),tmp[1]);
 		
 		//从ConcreteStateA状态通过a1事件触发，变化到ConcreteStateB状态
-		this.strategy.put(String.format(key,tmp[1].getState(), "a1"),tmp[2]);
+		this.strategy.put(String.format(KEY,tmp[1].getState(), "a1"),tmp[2]);
 		
 		//从ConcreteStateA状态通过a2事件触发，变化到end状态
-		this.strategy.put(String.format(key,tmp[1].getState(), "a2"),tmp[3]);
+		this.strategy.put(String.format(KEY,tmp[1].getState(), "a2"),tmp[3]);
 		
 		//从ConcreteStateB状态通过b1事件触发，变化到ConcreteStateA状态
-		this.strategy.put(String.format(key,tmp[2].getState(), "b1"),tmp[1]);
+		this.strategy.put(String.format(KEY,tmp[2].getState(), "b1"),tmp[1]);
 	}
 }

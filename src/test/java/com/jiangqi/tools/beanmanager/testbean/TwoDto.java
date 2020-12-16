@@ -6,6 +6,10 @@ import java.util.List;
 import com.jiangqi.tools.dto.TemplateDto;
 
 public class TwoDto extends TemplateDto {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6830261234724262524L;
 	private int a1;
 	private OneDto a3;
 	private List<OneDto> a4=new ArrayList<OneDto>();

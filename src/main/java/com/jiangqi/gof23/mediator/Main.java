@@ -10,7 +10,7 @@ public class Main {
 	 * 同事类间关系复杂，为网状方式，通过中介模式提取出一个中介类将这些关系变成星状，
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		ConcreteMediator m=new ConcreteMediator();
 		
 		ConcreteColleague1 c1=new ConcreteColleague1(m,"同事1");

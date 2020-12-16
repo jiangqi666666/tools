@@ -15,7 +15,7 @@ public class Main {
 	 * http://www.cnblogs.com/draem0507/p/3795158.html
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		ObjectStructure o=new ObjectStructure();
 		o.attach(new ConcreteElementA());
 		o.attach(new ConcreteElementB());

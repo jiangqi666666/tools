@@ -9,27 +9,27 @@ import java.util.Iterator;
  *@see Component
  */
 public class Composite extends Component {
-	private ArrayList<Component> children=new ArrayList<Component>();
+	private ArrayList<Component> children=new ArrayList<>();
 	
 	public Composite(String name){
 		super(name);
 	}
 
 	@Override
-	public void Add(Component c) {
-		// TODO Auto-generated method stub
+	public void add(Component c) {
+		
 		this.children.add(c);
 	}
 
 	@Override
-	public void Remove(Component c) {
-		// TODO Auto-generated method stub
+	public void remove(Component c) {
+		
 		this.children.remove(c);
 	}
 
 	@Override
-	public void Display(int depth) {
-		// TODO Auto-generated method stub
+	public void display(int depth) {
+		
 		for(int i=1;i<=depth;i++){
 			System.out.print("-");
 		}
@@ -39,7 +39,7 @@ public class Composite extends Component {
 		Component obj;
 		while(ite.hasNext()){
 			obj=ite.next();
-			obj.Display(depth+2);
+			obj.display(depth+2);
 		}
 	}
 

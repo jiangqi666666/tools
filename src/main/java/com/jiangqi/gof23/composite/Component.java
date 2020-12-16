@@ -14,16 +14,16 @@ public abstract class Component {
 	/**
 	 * 添加节点（树叶或树枝）
 	 */
-	public abstract void Add(Component c);
+	public abstract void add(Component c);
 	
 	/**
 	 * 移除节点（树叶或树枝）
 	 */
-	public abstract void Remove(Component c);
+	public abstract void remove(Component c);
 	
 	/**
 	 * 显示内容
 	 * @param depth 需要多少个横线
 	 */
-	public abstract void Display(int depth);
+	public abstract void display(int depth);
 }

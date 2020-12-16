@@ -18,24 +18,24 @@ public class Main {
 	 * Flyweight模式是一个提高程序效率和性能的模式,会大大加快程序的运行速度.应用场合很多：
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		
 		FlyweightFactory f=new FlyweightFactory();
 		
 		IFlyweight fx=f.getFlyWeight("X");
-		fx.Operation();
+		fx.operation();
 		
 		fx=f.getFlyWeight("Y");
-		fx.Operation();
+		fx.operation();
 		
 		fx=f.getFlyWeight("Z");
-		fx.Operation();
+		fx.operation();
 		
 		fx=f.getFlyWeight("Z");
-		fx.Operation();
+		fx.operation();
 		
 		fx=f.getFlyWeight("X");
-		fx.Operation();
+		fx.operation();
 		
 		System.out.println("享元数量："+f.getFlyweightSize());
 		

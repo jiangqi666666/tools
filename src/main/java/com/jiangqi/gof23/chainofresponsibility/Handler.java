@@ -20,5 +20,5 @@ public abstract class Handler {
 	 * 具体任务请求
 	 * @param request 任务请求
 	 */
-	public abstract void HandleRequest(int request);
+	public abstract void handleRequest(int request);
 }

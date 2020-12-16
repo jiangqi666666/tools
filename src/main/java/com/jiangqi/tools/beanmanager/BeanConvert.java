@@ -18,8 +18,10 @@ import java.util.List;
  */
 public class BeanConvert {
 	
-	public static final String TemplateDtoName="com.jiangqi.tools.dto.TemplateDto";
-	public static final String ListName="java.util.List";
+	public static final String TEMPLATE_DTO_NAME="com.jiangqi.tools.dto.TemplateDto";
+	public static final String LIST_NAME="java.util.List";
+	
+	private BeanConvert() {}
 	
 	/**
 	 * pojo转换到dto
@@ -39,20 +41,20 @@ public class BeanConvert {
 	 * @throws IntrospectionException 
 	 * @throws Exception
 	 */
-	public static Object Pojo2Dto(Object bean, String dtoName) throws InstantiationException, IllegalAccessException, ClassNotFoundException, IntrospectionException, IllegalArgumentException, InvocationTargetException{
+	public static Object pojo2Dto(Object bean, String dtoName) throws InstantiationException, IllegalAccessException, ClassNotFoundException, IntrospectionException, InvocationTargetException, IllegalArgumentException, NoSuchMethodException, SecurityException{
 
 		Object obj=null;
 		Class<?> superClass = null;
 
-		Object ret = Class.forName(dtoName).newInstance();
+		Object ret = Class.forName(dtoName).getDeclaredConstructor().newInstance();
 
 		Field[] field = ret.getClass().getDeclaredFields();
 		for (int i = 0; i < field.length; i++) {
 			if (field[i].getModifiers() == Modifier.PRIVATE) {
 				superClass = field[i].getType().getSuperclass();
-				if (superClass != null && superClass == Class.forName(BeanConvert.TemplateDtoName)) 
+				if (superClass != null && superClass == Class.forName(BeanConvert.TEMPLATE_DTO_NAME)) 
 					obj=setDtoField(field[i], bean);
-				else if (field[i].getType() == Class.forName(BeanConvert.ListName)) 
+				else if (field[i].getType() == Class.forName(BeanConvert.LIST_NAME)) 
 					obj=setListField(field[i], bean);
 				else 
 					obj=setSimpleField(field[i], bean);
@@ -65,7 +67,7 @@ public class BeanConvert {
 	}
 	
 	@SuppressWarnings(value={"unchecked", "rawtypes"})
-	private static List setListField(Field field, Object bean) throws IntrospectionException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, ClassNotFoundException, InstantiationException {
+	private static List setListField(Field field, Object bean) throws IntrospectionException, IllegalAccessException, InvocationTargetException, ClassNotFoundException, InstantiationException, IllegalArgumentException, NoSuchMethodException, SecurityException {
 		
 		Class<?> genericClass;
 		List ret=new ArrayList();
@@ -74,7 +76,7 @@ public class BeanConvert {
 		List<?> tmp = (List<?>)pd.getReadMethod().invoke(bean);
 
 		Type fc = field.getGenericType(); // 关键的地方，如果是List类型，得到其Generic的类型  
-        if(fc!=null && fc instanceof ParameterizedType) // 【3】如果是泛型参数的类型   
+        if( fc instanceof ParameterizedType) // 【3】如果是泛型参数的类型   
         {   
            ParameterizedType pt = (ParameterizedType) fc;  
            genericClass = (Class<?>)pt.getActualTypeArguments()[0]; //【4】 得到泛型里的class类型对象。
@@ -83,13 +85,10 @@ public class BeanConvert {
         	return ret;
 		
 		Object superClass = genericClass.getSuperclass();
-		if (superClass != null && superClass == Class.forName(BeanConvert.TemplateDtoName)) {
+		if (superClass != null && superClass == Class.forName(BeanConvert.TEMPLATE_DTO_NAME)) {
 			for(Object obj:tmp)
-				ret.add(Pojo2Dto(obj,genericClass.getName()));
+				ret.add(pojo2Dto(obj,genericClass.getName()));
 		} 
-		/*else if (superClass != null && superClass == Class.forName("java.util.List")) {
-			obj=setListField(field[i], bean);
-		}*/
 		else {
 			ret.addAll(tmp);
 		}
@@ -114,11 +113,11 @@ public class BeanConvert {
 	 * @throws ClassNotFoundException
 	 * @throws Exception
 	 */
-	private static Object setDtoField(Field field, Object bean) throws IntrospectionException, InstantiationException, IllegalAccessException, ClassNotFoundException, IllegalArgumentException, InvocationTargetException {
+	private static Object setDtoField(Field field, Object bean) throws IntrospectionException, InstantiationException, IllegalAccessException, ClassNotFoundException, InvocationTargetException, IllegalArgumentException, NoSuchMethodException, SecurityException {
 
 		PropertyDescriptor pd = new PropertyDescriptor(field.getName(), bean.getClass());
 
-		return Pojo2Dto(pd.getReadMethod().invoke(bean), field.getType().getName());
+		return pojo2Dto(pd.getReadMethod().invoke(bean), field.getType().getName());
 	}
 
 	/**
@@ -134,7 +133,7 @@ public class BeanConvert {
 	 * @throws IllegalArgumentException
 	 * @throws InvocationTargetException
 	 */
-	private static Object setSimpleField(Field field, Object bean) throws IntrospectionException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+	private static Object setSimpleField(Field field, Object bean) throws IntrospectionException, IllegalAccessException, InvocationTargetException {
 
 		PropertyDescriptor pd = new PropertyDescriptor(field.getName(), bean.getClass());
 

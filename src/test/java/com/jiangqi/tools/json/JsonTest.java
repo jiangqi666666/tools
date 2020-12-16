@@ -2,8 +2,8 @@ package com.jiangqi.tools.json;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import junit.framework.TestCase;
+//import com.jiangqi.tools.json.Json;
 
 public class JsonTest extends TestCase {
 	
@@ -79,7 +79,7 @@ public class JsonTest extends TestCase {
 		String ss=Json.entity2JSON( this.aa);
 		System.out.println("ss="+ss);
 		
-		//assertNull("返回字符串为空",ss); 
+		assertNull("返回字符串为空",ss); 
 	}
 	
 	public void testJson2xml() {
@@ -96,7 +96,7 @@ public class JsonTest extends TestCase {
 		
 		String tmp=Json.entity2JSON(this.aa);
 		
-		Object www=Json.jSON2Entity(tmp,Two.class);
+		Object www=Json.jSON2Entity(tmp);
 		if(www!=null)
 			System.out.println(www);
 		else

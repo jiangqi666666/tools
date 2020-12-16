@@ -3,7 +3,7 @@ package com.jiangqi.tools.propertymanager;
 import java.util.Vector;
 
 public class ListenerRegister {
-	private Vector<ValueChangeListener> listeners = new Vector<ValueChangeListener>();  
+	private Vector<ValueChangeListener> listeners = new Vector<>();  
 	  
     public synchronized void addListener(ValueChangeListener a) {  
         listeners.addElement(a);  
@@ -20,7 +20,7 @@ public class ListenerRegister {
             currentListeners = (Vector<ValueChangeListener>) listeners.clone();  
         }  
         for (int i = 0; i < currentListeners.size(); i++) {  
-            ValueChangeListener listener = (ValueChangeListener) currentListeners  
+            ValueChangeListener listener =  currentListeners  
                     .elementAt(i);  
             listener.performed(evt);  
         }  

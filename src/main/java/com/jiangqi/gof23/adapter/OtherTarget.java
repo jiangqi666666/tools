@@ -10,7 +10,7 @@ public class OtherTarget {
 	/**
 	 * 适配器包装的扩展目标的特殊方法
 	 */
-	public void SpecificRequest(){
+	public void specificRequest(){
 		System.out.println("OtherTarget的SpecificRequest方法");
 	}
 }

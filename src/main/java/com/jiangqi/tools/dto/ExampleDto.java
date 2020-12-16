@@ -49,15 +49,15 @@ public class ExampleDto extends TemplateDto {
 	}
 
 	public List<String> validAa(){
-		List<String> ret=new ArrayList<String>();
+		List<String> ret=new ArrayList<>();
 		if(this.aa>100||this.aa<10)
 			ret.add("aa属性错误，数据范围必须大于10，小于100");
 		return ret;
 	}
 	
 	public List<String> validCc(){
-		List<String> ret=new ArrayList<String>();
-		if(this.cc==false)
+		List<String> ret=new ArrayList<>();
+		if(!this.cc)
 			ret.add("cc属性错误，cc取值必须为真");
 		return ret;
 	}

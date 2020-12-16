@@ -10,7 +10,7 @@ public class Main {
 	 * 属性中的一小部分，Originator可以根据保存的Memento信息还原到前一状态
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		Originator o=new Originator();
 		o.setState("On");//将初始状态设置为On
 		o.show();

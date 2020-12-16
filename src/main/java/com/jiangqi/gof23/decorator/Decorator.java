@@ -19,10 +19,10 @@ public abstract class Decorator  implements IComponent {
 	}
 
 	@Override
-	public void Operation() {
-		// TODO Auto-generated method stub
+	public void operation() {
+
 		if(this.component!=null)
-			this.component.Operation();
+			this.component.operation();
 	}
 
 }

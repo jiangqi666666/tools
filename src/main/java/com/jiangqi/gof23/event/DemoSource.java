@@ -8,7 +8,7 @@ import java.util.ArrayList;
  *
  */
 public class DemoSource {
-	private ArrayList<DemoListener> repository = new ArrayList<DemoListener>();// 监听自己的监听器队列
+	private ArrayList<DemoListener> repository = new ArrayList<>();// 监听自己的监听器队列
 
 	/**
 	 * 添加事件侦听

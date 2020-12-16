@@ -8,7 +8,7 @@ public class Main {
 	 * 主体对象。这个主体对象在状态变化时，会通知所有观察者对象，使他能够自动更新自己。
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		ConcreteSubject s=new ConcreteSubject();
 		s.attach(new ConcreteObserver(s,"X"));
 		s.attach(new ConcreteObserver(s,"Y"));

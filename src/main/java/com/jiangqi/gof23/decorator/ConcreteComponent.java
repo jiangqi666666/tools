@@ -8,8 +8,8 @@ package com.jiangqi.gof23.decorator;
 public class ConcreteComponent implements IComponent {
 
 	@Override
-	public void Operation() {
-		// TODO Auto-generated method stub
+	public void operation() {
+
 		System.out.println("具体对象的操作");
 	}
 

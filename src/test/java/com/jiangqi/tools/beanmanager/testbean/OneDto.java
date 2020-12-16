@@ -3,6 +3,10 @@ package com.jiangqi.tools.beanmanager.testbean;
 import com.jiangqi.tools.dto.TemplateDto;
 
 public class OneDto extends TemplateDto {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3982842371948741016L;
 	private int a1;
 	private int a3;
 	

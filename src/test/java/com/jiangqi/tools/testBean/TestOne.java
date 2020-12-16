@@ -3,6 +3,10 @@ package com.jiangqi.tools.testBean;
 import java.io.Serializable;
 
 public class TestOne implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6869922849509126391L;
 	private int a;
 	private boolean b;
 	private String c;

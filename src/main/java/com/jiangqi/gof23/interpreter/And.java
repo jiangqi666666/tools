@@ -7,7 +7,8 @@ package com.jiangqi.gof23.interpreter;
  */
 public class And extends Expression {
 
-    private Expression left,right;
+    private Expression left;
+    private Expression right;
     
     public And(Expression left , Expression right){
         this.left = left;
@@ -16,7 +17,7 @@ public class And extends Expression {
     
     @Override
     public boolean equals(Object obj) {
-        if(obj != null && obj instanceof And)
+        if( obj instanceof And)
         {
             return left.equals(((And)obj).left) &&
                 right.equals(((And)obj).right);

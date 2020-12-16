@@ -9,7 +9,7 @@ import junit.framework.TestCase;
 
 public class HessianTest extends TestCase {
 	private TestTwo testBean;
-	private byte[] obj=null;
+	//private byte[] obj=null;
 
 	protected void setUp() throws Exception {
 		super.setUp();

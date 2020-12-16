@@ -11,13 +11,13 @@ public class ConcreteBuilder2 implements Builder {
 	@Override
 	public void buildPartA() {
 		// 这里是具体如何构建partA的代码
-		this.product.Add("创建大客车车轮");
+		this.product.add("创建大客车车轮");
 	}
 
 	@Override
 	public void buildPartB() {
 		// 这里是具体如何构建partB的代码
-		this.product.Add("创建大客车方向盘");
+		this.product.add("创建大客车方向盘");
 	}
 
 	@Override

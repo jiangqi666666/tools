@@ -12,20 +12,20 @@ public class Leaf extends Component {
 	}
 
 	@Override
-	public void Add(Component c) {
-		// TODO Auto-generated method stub
+	public void add(Component c) {
+
 		System.out.println("不能添加到leaf");
 	}
 
 	@Override
-	public void Remove(Component c) {
-		// TODO Auto-generated method stub
+	public void remove(Component c) {
+
 		System.out.println("不能移除从leaf");
 	}
 
 	@Override
-	public void Display(int depth) {
-		// TODO Auto-generated method stub
+	public void display(int depth) {
+
 		for(int i=1;i<=depth;i++){
 			System.out.print("-");
 		}

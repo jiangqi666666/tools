@@ -14,8 +14,8 @@ public class ConcreteFlyweight implements IFlyweight {
 	}
 
 	@Override
-	public void Operation() {
-		// TODO Auto-generated method stub
+	public void operation() {
+
 		System.out.println("æﬂÃÂFlyweight£∫"+str);
 	}
 

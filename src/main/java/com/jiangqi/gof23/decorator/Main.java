@@ -8,7 +8,7 @@ public class Main {
 	 * 但是不同的场合客户端可以根据需要挑选或者不使用修饰
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		/**
 		 * ConcreteComponents是原有类，
 		 * IComponent 抽象了需要装饰的方法
@@ -25,14 +25,14 @@ public class Main {
 		
 		//无需修饰
 		System.out.println("无需修饰-----");
-		c.Operation();
+		c.operation();
 		System.out.println("-----");
 		System.out.println();
 		
 		//通过A修饰
 		System.out.println("A修饰-----");
 		d1.setComponent(c);
-		d1.Operation();
+		d1.operation();
 		System.out.println("-----");
 		System.out.println();
 		
@@ -40,7 +40,7 @@ public class Main {
 		System.out.println("A,B修饰-----");
 		d1.setComponent(c);
 		d2.setComponent(d1);
-		d2.Operation();
+		d2.operation();
 		
 	}
 

@@ -10,5 +10,5 @@ public interface IComponent {
 	/**
 	 * 组件操作方法
 	 */
-	public  void Operation();
+	public  void operation();
 }

@@ -12,7 +12,7 @@ public class Main {
 	 * 4、智能指引，指调用真实对象时，代理处理另外一些事
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		// 普通代理演示
 		System.out.println("普通代理演示");
 		ProxyGeneral proxy = new ProxyGeneral();

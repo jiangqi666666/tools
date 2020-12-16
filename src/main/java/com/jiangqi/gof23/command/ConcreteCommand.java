@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class ConcreteCommand<T>  implements Command,Serializable  {
 	private static final long serialVersionUID = 1L;
-	private List<Receiver<T>> receivers=new ArrayList<Receiver<T>>();
+	private List<Receiver<T>> receivers=new ArrayList<>();
 	private T commandPars=null;
 
 	/**
@@ -25,19 +25,21 @@ public class ConcreteCommand<T>  implements Command,Serializable  {
 	
 	@Override
 	public void execute() {
-		// TODO Auto-generated method stub
+		
 		for(Receiver<T> receiver:this.receivers)
 			receiver.action(this.commandPars);
 	}
 
 	@Override
 	public void undo() {
-		// TODO Auto-generated method stub
+		System.out.print("undo something");
+		
 	}
 
 	@Override
 	public void redo() {
-		// TODO Auto-generated method stub
+		System.out.print("redo something");
+		
 	}
 
 	/**
@@ -45,7 +47,7 @@ public class ConcreteCommand<T>  implements Command,Serializable  {
 	 * @param receiver
 	 */
 	public void addReceiver(Receiver<T> receiver) {
-		// TODO Auto-generated method stub
+	
 		this.receivers.add(receiver);
 	}
 }

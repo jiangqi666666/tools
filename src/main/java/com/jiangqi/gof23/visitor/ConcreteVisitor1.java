@@ -8,13 +8,13 @@ public class ConcreteVisitor1 implements Visitor {
 
 	@Override
 	public void visitConcreteElementA(ConcreteElementA concreteElementA) {
-		// TODO Auto-generated method stub
+
 		System.out.println(concreteElementA.getClass().getName()+"被"+this.getClass().getName()+"访问");
 	}
 
 	@Override
 	public void visitConcreteElementB(ConcreteElementB concreteElementB) {
-		// TODO Auto-generated method stub
+
 		System.out.println(concreteElementB.getClass().getName()+"被"+this.getClass().getName()+"访问");
 	}
 

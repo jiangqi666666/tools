@@ -7,7 +7,7 @@ public class Main {
 	 * 屏蔽客户端初始化具体的类，交给工厂完成
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		ITest test;
 		test=Fcatory.getTest(0);
 		test.doSomeThing();

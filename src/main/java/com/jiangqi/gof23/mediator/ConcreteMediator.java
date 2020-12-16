@@ -6,7 +6,7 @@ import java.util.Map;
 //具体中介类
 public class ConcreteMediator implements Mediator {
 	
-	private Map<String,Colleague> colleague=new HashMap<String,Colleague>();
+	private Map<String,Colleague> colleague=new HashMap<>();
 	
 	@Override
 	public Mediator addColleague(Colleague colleague) {
@@ -16,10 +16,10 @@ public class ConcreteMediator implements Mediator {
 
 	@Override
 	public void send(String message, String name) {
-		// TODO Auto-generated method stub
-		Colleague colleague=this.colleague.get(name);
-		if(colleague!=null)
-			colleague.notify(message);
+
+		Colleague tmp=this.colleague.get(name);
+		if(tmp!=null)
+			tmp.notify(message);
 	}
 
 }

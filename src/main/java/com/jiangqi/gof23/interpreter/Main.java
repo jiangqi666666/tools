@@ -9,7 +9,7 @@ public class Main {
 	 * http://www.cnblogs.com/java-my-life/archive/2012/06/19/2552617.html
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		Context ctx = new Context();
         Variable x = new Variable("x");
         Variable y = new Variable("y");

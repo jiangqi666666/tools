@@ -9,16 +9,16 @@ public class Main {
 	 * 深复制：所有类和类内的对象都复制，需注意复制深度和对象间引用关系，防止造成死循环
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		//浅复制对象
 		OneTest one=new OneTest();
 		TwoTest two=new TwoTest();
-		two.one=one;
+		two.setOne(one);
 		
 		//深复制对象
 		AllOneTest allOne=new AllOneTest();
 		AllTwoTest allTwo=new AllTwoTest();
-		allTwo.one=allOne;
+		allTwo.setOne(allOne);
 		
 		try {
 			//浅复制
@@ -28,28 +28,29 @@ public class Main {
 			
 			//复制前取值
 			System.out.println("浅复制复制前取值------------");
-			System.out.println(test1.i);
-			System.out.println(test1.one.i);
+			System.out.println(test1.getI());
+			System.out.println(test1.getOne().getI());
 			System.out.println("深复制复制前取值------------");
-			System.out.println(test2.i);
-			System.out.println(test2.one.i);
+			System.out.println(test2.getI());
+			System.out.println(test2.getOne().getI());
 			
 			//修改原对象内容，验证复制情况
-			two.i="这是浅复制对象One修改值！！";
-			two.one.i="这是浅复制对象Two修改值！！";
-			allTwo.i="这是深复制对象One修改值！！";
-			allTwo.one.i="这是深复制对象Two修改值！！";
+			two.setI("这是浅复制对象One修改值！！");
+			
+			two.getOne().setI("这是浅复制对象Two修改值！！");
+			allTwo.setI("这是深复制对象One修改值！！");
+			allTwo.getOne().setI("这是深复制对象Two修改值！！");
 						
 			//复制后取值
 			System.out.println("浅复制复制后取值------------");
-			System.out.println(test1.i);
-			System.out.println(test1.one.i);
+			System.out.println(test1.getI());
+			System.out.println(test1.getOne().getI());
 			System.out.println("深复制复制后取值------------");
-			System.out.println(test2.i);
-			System.out.println(test2.one.i);
+			System.out.println(test2.getI());
+			System.out.println(test2.getOne().getI());
 			
 		} catch (CloneNotSupportedException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		

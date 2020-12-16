@@ -6,6 +6,8 @@ package com.jiangqi.gof23.simplefactory;
  *
  */
 public class Fcatory {
+	
+	private Fcatory() {}
 
 	/**
 	 * 工厂根据索引创建对应实例
@@ -13,7 +15,7 @@ public class Fcatory {
 	 * @return
 	 */
 	public static ITest  getTest(int i) {
-		// TODO Auto-generated method stub
+
 		switch(i){
 		case 0:
 			return new OneTest();

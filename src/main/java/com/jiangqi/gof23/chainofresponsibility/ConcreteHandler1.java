@@ -8,11 +8,11 @@ package com.jiangqi.gof23.chainofresponsibility;
 public class ConcreteHandler1 extends Handler {
 
 	@Override
-	public void HandleRequest(int request) {
-		// TODO Auto-generated method stub
+	public void handleRequest(int request) {
+		
 		if(request>=0 && request<10)
 			System.out.println(this.getClass().getName()+"´¦ÀíÇëÇó£º"+request);
 		else if(successor!=null)
-			successor.HandleRequest(request);
+			successor.handleRequest(request);
 	}
 }

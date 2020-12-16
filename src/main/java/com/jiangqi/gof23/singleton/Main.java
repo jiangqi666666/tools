@@ -7,7 +7,7 @@ public class Main {
 	 * 保证一个类仅有一个实例，并提供一个访问它的全局访问点
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		Singleton s1=Singleton.GetInstance();
 		Singleton s2=Singleton.GetInstance();
 		if(s1==s2)

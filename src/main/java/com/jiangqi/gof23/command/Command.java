@@ -1,11 +1,13 @@
 package com.jiangqi.gof23.command;
 
+
+
 /**
  * ÃüÁî½Ó¿Ú
  * @author jiangqi
  *
  */
-public  interface  Command {
+public  interface  Command  {
 	
 	/**
 	 * Ö´ĞĞÃüÁî

@@ -11,7 +11,7 @@ import java.util.Map;
  */
 public class Context {
 
-    private Map<Variable,Boolean> map = new HashMap<Variable,Boolean>();
+    private Map<Variable,Boolean> map = new HashMap<>();
     
     /**
      * 给变量设置布尔值
@@ -19,7 +19,7 @@ public class Context {
      * @param value 设置的布尔值
      */
     public void assign(Variable var , boolean value){
-        map.put(var, new Boolean(value));
+        map.put(var, Boolean.valueOf(value));
     }
     
     /**
@@ -28,11 +28,8 @@ public class Context {
      * @return 变量的布尔值
      * @throws IllegalArgumentException
      */
-    public boolean lookup(Variable var) throws IllegalArgumentException{
+    public boolean lookup(Variable var) {
         Boolean value = map.get(var);
-        if(value == null){
-            throw new IllegalArgumentException();
-        }
         return value.booleanValue();
     }
 }

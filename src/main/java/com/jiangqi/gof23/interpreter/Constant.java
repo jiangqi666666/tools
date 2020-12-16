@@ -35,7 +35,7 @@ public class Constant extends Expression{
 
     @Override
     public String toString() {
-        return new Boolean(value).toString();
+        return Boolean.toString(value);
     }
     
 }

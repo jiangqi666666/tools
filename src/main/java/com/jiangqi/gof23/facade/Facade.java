@@ -13,15 +13,15 @@ public class Facade {
 	/**
 	 * 调用子系统one的方法MethodOne
 	 */
-	public void MethodA(){
-		this.one.MethodOne();
+	public void methodA(){
+		this.one.methodOne();
 	}
 
 	/**
 	 * 调用子系统two的方法MethodOne和MethodTwo
 	 */
-	public void MethodB(){
-		this.two.MethodOne();
-		this.two.MethodTwo();
+	public void methodB(){
+		this.two.methodOne();
+		this.two.methodTwo();
 	}
 }

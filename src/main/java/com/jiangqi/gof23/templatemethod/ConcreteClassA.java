@@ -8,14 +8,14 @@ package com.jiangqi.gof23.templatemethod;
 public class ConcreteClassA extends AbstractClass {
 
 	@Override
-	public void PrimitiveOperation1() {
-		// TODO Auto-generated method stub
+	public void primitiveOperation1() {
+		
 		System.out.println("具体类A方法1实现");
 	}
 
 	@Override
-	public void PrimitiveOperation2() {
-		// TODO Auto-generated method stub
+	public void primitiveOperation2() {
+		
 		System.out.println("具体类A方法2实现");
 	}
 

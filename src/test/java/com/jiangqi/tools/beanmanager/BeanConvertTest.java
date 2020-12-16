@@ -48,7 +48,7 @@ public class BeanConvertTest extends TestCase {
 		//fail("Not yet implemented");
 		TwoDto twoDto=null;
 		try {
-			twoDto=(TwoDto)BeanConvert.Pojo2Dto(this.two, "com.jiangqi.tools.beanmanager.testbean.TwoDto");
+			twoDto=(TwoDto)BeanConvert.pojo2Dto(this.two, "com.jiangqi.tools.beanmanager.testbean.TwoDto");
 			twoDto.clearChangedFlag();
 			//twoDto.restoreChangedValule();
 		} catch (InstantiationException e) {

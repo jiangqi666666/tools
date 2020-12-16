@@ -9,7 +9,6 @@ public class TwoFactory implements IFcatory {
 
 	@Override
 	public ITest getTest(int i) {
-		// TODO Auto-generated method stub
 		switch(i){
 		case 0:
 			return new TwoTest();
